@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>DUO KITTU CAREER PATH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <div class="logo-circle">
+                <div class="logo-men">
+                    <span class="logo-man left"></span>
+                    <span class="logo-man right"></span>
+                    <span class="logo-path"></span>
+                </div>
+            </div>
+            <div class="logo-text">
+                <div class="logo-title">DUO KITTU</div>
+                <div class="logo-subtitle">CAREER PATH</div>
+            </div>
+        </div>
+        <div class="header-meta">
+            <span class="created-by">Created by VISHWANATHAN &amp; JEEVANESH</span>
+            <button id="prevBtn" class="nav-button" type="button">&larr; Previous</button>
+        </div>
+    </header>
+
+    <section class="quote-bar">
+        <div id="quoteText" class="quote-text"></div>
+    </section>
+
+    <main id="app">
+        <!-- Page 1: Welcome -->
+        <section class="page active" data-page="1">
+            <div class="hero">
+                <div class="hero-text">
+                    <h1 class="hero-title">Welcome to <span class="accent">DUO KITTU CAREER PATH</span></h1>
+                    <p class="hero-desc">
+                        One-stop premium guide to plan your career journey with clear domains, skills, salaries and real opportunities in India.
+                    </p>
+                    <button id="startJourneyBtn" class="primary-btn" type="button">
+                        START YOUR CAREER JOURNEY
+                        <span class="btn-glow"></span>
+                    </button>
+                </div>
+                <div class="hero-visual">
+                    <div class="stair-animation">
+                        <span class="step step-1"></span>
+                        <span class="step step-2"></span>
+                        <span class="step step-3"></span>
+                        <span class="step step-4"></span>
+                        <span class="step step-5"></span>
+                        <div class="climber"></div>
+                    </div>
+                    <p class="visual-caption">Two mentors guiding you on the path to success.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 2: Login -->
+        <section class="page" data-page="2">
+            <div class="card">
+                <h2 class="card-title">Login to get your personalised path</h2>
+                <form id="loginForm" class="form-grid">
+                    <div class="form-group">
+                        <label for="fullName">Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth <span class="required">*</span></label>
+                        <input
+                            type="date"
+                            id="dob"
+                            name="dob"
+                            min="1970-01-01"
+                            max="2024-12-31"
+                            required
+                        />
+                        
+                    </div>
+                    <div class="form-actions">
+                        <button class="primary-btn" type="submit">Continue</button>
+                    </div>
+                </form>
+                <p class="note">Your details are used only to personalise your guidance.</p>
+            </div>
+        </section>
+
+        <!-- Page 3: Qualification -->
+        <section class="page" data-page="3">
+            <div class="card">
+                <h2 class="card-title">Select your current qualification</h2>
+                <div class="option-grid">
+                    <button class="option-btn qualification-btn" data-value="Schooling">Schooling</button>
+                    <button class="option-btn qualification-btn" data-value="Diploma">Diploma</button>
+                    <button class="option-btn qualification-btn" data-value="Bachelor Degree">Bachelor Degree</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 4: Degree Type -->
+        <section class="page" data-page="4">
+            <div class="card">
+                <h2 class="card-title">Select your degree</h2>
+                <div class="option-grid">
+                    <button class="option-btn degree-btn" data-value="BE">BE</button>
+                    <button class="option-btn degree-btn" data-value="B.Tech">B.Tech</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 5: Branch -->
+        <section class="page" data-page="5">
+            <div class="card">
+                <h2 class="card-title">Select your branch</h2>
+                <div class="option-grid">
+                    <button class="option-btn branch-btn" data-value="ECE">ECE</button>
+                    <button class="option-btn branch-btn" data-value="EEE">EEE</button>
+                    <button class="option-btn branch-btn" data-value="CSE">CSE</button>
+                    <button class="option-btn branch-btn" data-value="CYBER SECURITY">CYBER SECURITY</button>
+                    <button class="option-btn branch-btn" data-value="CIVIL">CIVIL</button>
+                    <button class="option-btn branch-btn" data-value="MECHANICAL">MECHANICAL</button>
+                    <button class="option-btn branch-btn" data-value="IT">IT</button>
+                    <button class="option-btn branch-btn" data-value="AI &amp; DS">AI &amp; DS</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 6: Industry -->
+        <section class="page" data-page="6">
+            <div class="card">
+                <h2 class="card-title">Select your preferred industry</h2>
+                <div class="option-grid">
+                    <button class="option-btn industry-btn" data-value="Software">Software</button>
+                    <button class="option-btn industry-btn" data-value="Hardware">Hardware</button>
+                </div>
+                <button id="confirmPathBtn" class="primary-btn confirm-btn" type="button">
+                    Confirm Selection
+                </button>
+                <div id="summaryText" class="summary-text"></div>
+            </div>
+        </section>
+
+        <!-- Page 7: Domain list -->
+        <section class="page" data-page="7">
+            <div class="card">
+                <h2 class="card-title">Select your domain</h2>
+                <p class="card-subtitle">
+                    Domains are generated based on your branch and industry preference.
+                </p>
+                <div id="domainList" class="option-grid"></div>
+            </div>
+        </section>
+
+        <!-- Page 8: Domain details -->
+        <section class="page" data-page="8">
+            <div class="domain-wrapper">
+                <h2 class="domain-heading">RECOMMENDED DOMAIN</h2>
+
+                <div class="domain-card">
+                    <div class="domain-card-header">
+                        <div class="domain-icon">
+                            <span class="dot dot-1"></span>
+                            <span class="dot dot-2"></span>
+                        </div>
+                        <div class="domain-title-block">
+                            <h3 id="domainTitle" class="domain-title"></h3>
+                            <p id="domainSubtitle" class="domain-subtitle"></p>
+                        </div>
+                        <div class="domain-tag">
+                            <span id="domainOptionTag">OPTION</span>
+                        </div>
+                    </div>
+
+                    <div class="domain-card-body">
+                        <div class="domain-row">
+                            <div class="domain-col">
+                                <h4>KEY SKILLS</h4>
+                                <ul id="skillsList" class="pill-list"></ul>
+                            </div>
+                            <div class="domain-col">
+                                <h4>FOUNDATIONS</h4>
+                                <ul id="fundamentalsList" class="text-list"></ul>
+                            </div>
+                        </div>
+
+                        <div class="domain-row">
+                            <div class="domain-col">
+                                <h4>BASIC NEEDS</h4>
+                                <ul id="basicsList" class="text-list"></ul>
+                            </div>
+                            <div class="domain-col">
+                                <h4>SCOPE IN INDIA</h4>
+                                <ul id="scopeList" class="text-list"></ul>
+                            </div>
+                        </div>
+
+                        <div class="domain-row">
+                            <div class="domain-col">
+                                <h4>AVG. SALARY</h4>
+                                <ul id="salaryList" class="text-list salary-list"></ul>
+                            </div>
+                            <div class="domain-col">
+                                <h4>REQUIREMENTS</h4>
+                                <ul id="requirementsList" class="text-list"></ul>
+                            </div>
+                        </div>
+
+                        <div class="domain-row">
+                            <div class="domain-col">
+                                <h4>TOP RECRUITERS</h4>
+                                <ul id="companiesList" class="pill-list"></ul>
+                            </div>
+                            <div class="domain-col">
+                                <h4>RECOMMENDED BOOKS</h4>
+                                <ul id="booksList" class="text-list"></ul>
+                            </div>
+                        </div>
+
+                        <div class="domain-row full">
+                            <div class="domain-col">
+                                <h4>EXTRA KEY POINTS</h4>
+                                <ul id="extrasList" class="text-list"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="domain-row full">
+                            <div class="domain-col">
+                                <h4>EXTRA KEY POINTS</h4>
+                                <ul id="extrasList" class="text-list"></ul>
+                            </div>
+                        </div>
+
+                        <!-- contact strip inside domain card -->
+                        <div class="domain-contact-strip">
+                            <div class="domain-contact-block">
+                                <span class="label">Call</span>
+                                <span class="value">
+                                    7639516071 &nbsp;|&nbsp; 8015272452
+                                </span>
+                            </div>
+                            <div class="domain-contact-block">
+                                <span class="label">Mail</span>
+                                <span class="value">
+                                    nathanmvishwa@gmail.com &nbsp;|&nbsp;
+                                    bavebave222@gmail.com &nbsp;|&nbsp;
+                                    duokittu1@gmail.com
+                                </span>
+                            </div>
+                        </div>
+        </section>
+
+               
+                 
+
+        <!-- Page 9: Contact -->
+        <section class="page" data-page="9">
+            <div class="card">
+                <h2 class="card-title">Contact &amp; Support</h2>
+                <p class="card-subtitle">
+                    Reach out for personalised guidance, doubts and future roadmap discussions.
+                </p>
+                <div class="contact-grid">
+                    <div>
+                        <h3>Phone</h3>
+                        <p>7639516071</p>
+                        <p>8015272452</p>
+                    </div>
+                    <div>
+                        <h3>Email</h3>
+                        <p>nathanmvishwa@gmail.com</p>
+                        <p>bavebave222@gmail.com</p>
+                        <p>duokittu1@gmail.com</p>
+                    </div>
+                </div>
+                <p class="note">
+                    Keep learning, keep upgrading yourself, and your career path will automatically become brighter.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <span>DUO KITTU CAREER PATH &bull; Created by VISHWANATHAN &amp; JEEVANESH</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
