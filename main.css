@@ -897,8 +897,10 @@ input[type="date"]:focus {
 
 }
 .kural-quote {
+    padding-top: 6px;
     margin-top: 6px;
     font-size: 0.8rem;
     color: #9ca3ff;
     text-align: center;
 }
+
