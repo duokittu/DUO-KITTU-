@@ -894,4 +894,11 @@ input[type="date"]:focus {
     .domain-contact-strip {
         grid-template-columns: minmax(0, 1fr);
     }
+
+}
+.kural-quote {
+    margin-top: 6px;
+    font-size: 0.8rem;
+    color: #9ca3ff;
+    text-align: center;
 }
